@@ -9,8 +9,9 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
+       <FeaturedProducts />
       <Features />
-      <FeaturedProducts />
+      
       <Footer />
     </>
   );

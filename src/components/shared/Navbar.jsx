@@ -6,13 +6,10 @@ import {
   FiMoon,
   FiSun,
 } from "react-icons/fi";
-
+import { Link, NavLink } from "react-router-dom";
 const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "Products", href: "#products" },
-  { name: "Categories", href: "#categories" },
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", path: "/" },
+  { name: "Products", path: "/products" },
 ];
 
 export default function Navbar() {
@@ -43,28 +40,34 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-lg dark:border-slate-800 dark:bg-slate-950/80">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        {/* Logo */}
-        <a
-          href="#home"
-          className="text-3xl font-black tracking-wide"
-        >
+     
+     <Link
+  to="/"
+  className="text-3xl font-black tracking-wide"
+>
           <span className="text-violet-600">Electro</span>
           <span className="text-slate-900 dark:text-white">
             Hub
           </span>
-        </a>
+       </Link>
 
-        {/* Desktop Menu */}
+    
         <nav className="hidden items-center gap-8 md:flex">
-          {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="font-medium text-slate-700 transition hover:text-violet-600 dark:text-slate-300 dark:hover:text-violet-400"
-            >
-              {item.name}
-            </a>
-          ))}
+         {navItems.map((item) => (
+  <NavLink
+    key={item.name}
+    to={item.path}
+    className={({ isActive }) =>
+      `font-medium transition ${
+        isActive
+          ? "text-violet-600"
+          : "text-slate-700 hover:text-violet-600 dark:text-slate-300 dark:hover:text-violet-400"
+      }`
+    }
+  >
+    {item.name}
+  </NavLink>
+))}
         </nav>
 
         {/* Right */}
@@ -119,16 +122,22 @@ export default function Navbar() {
       {menuOpen && (
         <div className="border-t border-slate-200 bg-white px-6 py-6 dark:border-slate-800 dark:bg-slate-950 md:hidden">
           <nav className="flex flex-col gap-5">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                onClick={() => setMenuOpen(false)}
-                className="text-lg font-medium text-slate-700 hover:text-violet-600 dark:text-slate-300"
-              >
-                {item.name}
-              </a>
-            ))}
+           {navItems.map((item) => (
+  <NavLink
+    key={item.name}
+    to={item.path}
+    onClick={() => setMenuOpen(false)}
+    className={({ isActive }) =>
+      `text-lg font-medium ${
+        isActive
+          ? "text-violet-600"
+          : "text-slate-700 hover:text-violet-600 dark:text-slate-300"
+      }`
+    }
+  >
+    {item.name}
+  </NavLink>
+))}
 
             <button className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-violet-600 py-3 font-semibold text-white hover:bg-violet-700">
               <FiShoppingCart />
