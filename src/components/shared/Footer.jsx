@@ -11,7 +11,7 @@ import {
   FiMapPin,
   FiChevronRight,
 } from "react-icons/fi";
-
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-950">
@@ -20,7 +20,7 @@ export default function Footer() {
 
         <div className="grid gap-10 md:grid-cols-3">
 
-          {/* Logo & Description */}
+         
           <div>
             <h2 className="text-3xl font-black">
               <span className="text-violet-600">Electro</span>
@@ -34,41 +34,40 @@ export default function Footer() {
               quality products, and a better shopping experience.
             </p>
 
-            <div className="mt-6 flex gap-3">
+           <div className="mt-6 flex gap-3">
+  {/* Facebook */}
+  <a
+    href="https://www.facebook.com/YOUR_FACEBOOK_USERNAME"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-200 text-slate-700 transition hover:bg-violet-600 hover:text-white dark:bg-slate-800 dark:text-white"
+  >
+    <FaFacebookF />
+  </a>
 
-              <a
-                href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-200 text-slate-700 hover:bg-violet-600 hover:text-white transition dark:bg-slate-800 dark:text-white"
-              >
-                <FaFacebookF />
-              </a>
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/in/jannati-jannati-0203693b4"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-200 text-slate-700 transition hover:bg-violet-600 hover:text-white dark:bg-slate-800 dark:text-white"
+  >
+    <FaLinkedinIn />
+  </a>
 
-              <a
-                href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-200 text-slate-700 hover:bg-violet-600 hover:text-white transition dark:bg-slate-800 dark:text-white"
-              >
-                <FaInstagram />
-              </a>
-
-              <a
-                href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-200 text-slate-700 hover:bg-violet-600 hover:text-white transition dark:bg-slate-800 dark:text-white"
-              >
-                <FaLinkedinIn />
-              </a>
-
-              <a
-                href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-200 text-slate-700 hover:bg-violet-600 hover:text-white transition dark:bg-slate-800 dark:text-white"
-              >
-                <FaGithub />
-              </a>
-
-            </div>
+  {/* GitHub */}
+  <a
+    href="https://github.com/mdabgal"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-200 text-slate-700 transition hover:bg-violet-600 hover:text-white dark:bg-slate-800 dark:text-white"
+  >
+    <FaGithub />
+  </a>
+</div>
           </div>
 
 
-          {/* Quick Links Center */}
           <div className="md:text-center">
 
             <h3 className="mb-5 text-xl font-bold text-slate-900 dark:text-white">
@@ -77,55 +76,41 @@ export default function Footer() {
 
             <ul className="space-y-3">
 
-              <li>
-                <a
-                  href="#home"
-                  className="flex items-center gap-2 text-slate-600 hover:text-violet-600 dark:text-slate-400 dark:hover:text-violet-400 md:justify-center"
-                >
-                  <FiChevronRight />
-                  Home
-                </a>
-              </li>
+             <li>
+    <Link
+      to="/"
+      className="flex items-center gap-2 text-slate-600 hover:text-violet-600 dark:text-slate-400 dark:hover:text-violet-400 md:justify-center"
+    >
+      <FiChevronRight />
+      Home
+    </Link>
+  </li>
 
+  <li>
+    <Link
+      to="/products"
+      className="flex items-center gap-2 text-slate-600 hover:text-violet-600 dark:text-slate-400 dark:hover:text-violet-400 md:justify-center"
+    >
+      <FiChevronRight />
+      Products
+    </Link>
+  </li>
 
-              <li>
-                <a
-                  href="#products"
-                  className="flex items-center gap-2 text-slate-600 hover:text-violet-600 dark:text-slate-400 dark:hover:text-violet-400 md:justify-center"
-                >
-                  <FiChevronRight />
-                  Products
-                </a>
-              </li>
-
-
-              <li>
-                <a
-                  href="#categories"
-                  className="flex items-center gap-2 text-slate-600 hover:text-violet-600 dark:text-slate-400 dark:hover:text-violet-400 md:justify-center"
-                >
-                  <FiChevronRight />
-                  Categories
-                </a>
-              </li>
-
-
-              <li>
-                <a
-                  href="#contact"
-                  className="flex items-center gap-2 text-slate-600 hover:text-violet-600 dark:text-slate-400 dark:hover:text-violet-400 md:justify-center"
-                >
-                  <FiChevronRight />
-                  Contact
-                </a>
-              </li>
-
+  <li>
+    <Link
+      to="/contact"
+      className="flex items-center gap-2 text-slate-600 hover:text-violet-600 dark:text-slate-400 dark:hover:text-violet-400 md:justify-center"
+    >
+      <FiChevronRight />
+      Contact
+    </Link>
+  </li>
             </ul>
 
           </div>
 
 
-          {/* Contact */}
+        
           <div>
 
             <h3 className="mb-5 text-xl font-bold text-slate-900 dark:text-white">
@@ -137,13 +122,13 @@ export default function Footer() {
 
               <p className="flex items-center gap-3">
                 <FiMail className="text-violet-600" />
-                support@electrohub.com
+                jannati2917@gmail.com
               </p>
 
 
               <p className="flex items-center gap-3">
                 <FiPhone className="text-violet-600" />
-                +880 1234-567890
+                +880 1754252246
               </p>
 
 
@@ -160,7 +145,7 @@ export default function Footer() {
         </div>
 
 
-        {/* Bottom */}
+        
         <div className="mt-12 border-t border-slate-200 pt-6 text-center dark:border-slate-800">
 
           <p className="text-sm text-slate-500 dark:text-slate-400">

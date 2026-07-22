@@ -22,7 +22,7 @@ const contactInfo = [
     id: 3,
     icon: <FiMail />,
     title: "Email Address",
-    value: "support@electrohub.com",
+    value: "jannati2917@gmail.com",
   },
   {
     id: 4,
