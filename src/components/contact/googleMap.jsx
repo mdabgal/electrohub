@@ -51,9 +51,9 @@ export default function GoogleMap() {
             ElectroHub Showroom
           </h3>
 
-          <p className="mt-3 text-slate-600 dark:text-slate-400">
+          {/* <p className="mt-3 text-slate-600 dark:text-slate-400">
             123 Tech Street, Dhaka 1207, Bangladesh
-          </p>
+          </p> */}
 
           <p className="mt-2 text-slate-500 dark:text-slate-500">
             Open Monday – Saturday | 9:00 AM – 8:00 PM
