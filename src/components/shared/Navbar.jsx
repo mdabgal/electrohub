@@ -10,6 +10,7 @@ import { Link, NavLink } from "react-router-dom";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "Products", path: "/products" },
+    { name: "Contact", path: "/contact" },
 ];
 
 export default function Navbar() {
@@ -70,7 +71,7 @@ export default function Navbar() {
 ))}
         </nav>
 
-        {/* Right */}
+      
         <div className="hidden items-center gap-3 md:flex">
           <button
             onClick={toggleTheme}
@@ -92,7 +93,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Buttons */}
+       
         <div className="flex items-center gap-3 md:hidden">
           <button
             onClick={toggleTheme}
@@ -118,7 +119,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+     
       {menuOpen && (
         <div className="border-t border-slate-200 bg-white px-6 py-6 dark:border-slate-800 dark:bg-slate-950 md:hidden">
           <nav className="flex flex-col gap-5">
