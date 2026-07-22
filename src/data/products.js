@@ -172,6 +172,68 @@ description:
       description:
   "Logitech MX Master 3S is an ergonomic wireless mouse with ultra-precise tracking, silent clicks, customizable buttons, and multi-device connectivity."
   },
+
+
+
+  {
+  id: 16,
+  name: "Samsung Odyssey G9",
+  category: "Monitor",
+  price: 1299,
+  rating: 4.9,
+  image:
+    "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+  description:
+    "Samsung Odyssey G9 is an ultra-wide curved gaming monitor featuring a high refresh rate, immersive display, HDR support, and stunning visual performance.",
+},
+
+{
+  id: 17,
+  name: "PlayStation 5 Slim",
+  category: "Gaming Console",
+  price: 499,
+  rating: 4.9,
+  image:
+    "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=800&q=80",
+  description:
+    "PlayStation 5 Slim delivers lightning-fast loading, immersive 4K gaming, ray tracing technology, and an extensive library of exclusive titles.",
+},
+
+{
+  id: 18,
+  name: "DJI Mini 4 Pro",
+  category: "Drone",
+  price: 899,
+  rating: 4.8,
+  image:
+    "https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=800&q=80",
+  description:
+    "DJI Mini 4 Pro is a lightweight drone with 4K HDR video recording, intelligent flight modes, obstacle avoidance, and exceptional aerial photography capabilities.",
+},
+
+{
+  id: 19,
+  name: "Razer BlackWidow V4",
+  category: "Keyboard",
+  price: 179,
+  rating: 4.8,
+  image:
+    "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&w=800&q=80",
+  description:
+    "Razer BlackWidow V4 is a premium mechanical gaming keyboard featuring RGB lighting, tactile switches, customizable macros, and durable construction.",
+},
+
+{
+  id: 20,
+  name: "Anker PowerCore 26800",
+  category: "Power Bank",
+  price: 89,
+  rating: 4.7,
+  image:
+    "https://images.unsplash.com/photo-1587033411391-5d9e51cce126?auto=format&fit=crop&w=800&q=80",
+  description:
+    "Anker PowerCore 26800 is a high-capacity portable charger with fast charging support, multiple USB ports, and reliable power for smartphones, tablets, and laptops.",
+},
 ];
 
 export default products;
